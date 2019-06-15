@@ -1,11 +1,13 @@
+package ru.kuchanov.gai;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class SpecialNumbers
-{
+public class SpecialNumbers {
+
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
@@ -13,21 +15,18 @@ public class SpecialNumbers
 
         ArrayList<String> moreLetters = new ArrayList<>();
 
-        for(Character y : lettersOfNumber)
-        {
+        for (Character y : lettersOfNumber) {
             moreLetters.add(y.toString() + y.toString() + y.toString());
         }
 
         ArrayList<Integer> numbers = new ArrayList<>();
 
-        for(int i = 1; i < 10; i++)
-        {
-            numbers.add(i*100 + i*10 + i);
+        for (int i = 1; i < 10; i++) {
+            numbers.add(i * 100 + i * 10 + i);
         }
 
         ArrayList<String> stringNumbers = new ArrayList<>();
-        for(Integer newInt : numbers)
-        {
+        for (Integer newInt : numbers) {
             stringNumbers.add(newInt.toString());
         }
 
@@ -39,7 +38,7 @@ public class SpecialNumbers
         stringNumbers.add("123");
         stringNumbers.add("404");
 
-        for(String x : stringNumbers) {
+        for (String x : stringNumbers) {
             System.out.println(x);
         }
 
@@ -48,19 +47,16 @@ public class SpecialNumbers
         regions.sort(Comparator.naturalOrder());
 
         ArrayList<String> allAutoSigns = new ArrayList<>();
-        for (String threeBukvi: moreLetters) {
-            for (String threeCifri: stringNumbers) {
-                for (String region: regions) {
-                    allAutoSigns.add(threeBukvi+threeCifri+region);
+        for (String threeBukvi : moreLetters) {
+            for (String threeCifri : stringNumbers) {
+                for (String region : regions) {
+                    allAutoSigns.add(threeBukvi + threeCifri + region);
                 }
             }
         }
 
-        for(String o : allAutoSigns)
-        {
+        for (String o : allAutoSigns) {
             System.out.println(o);
         }
-
-
     }
 }
