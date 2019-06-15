@@ -89,8 +89,6 @@ public class SpecialNumbers {
             allAutoSigns.put(region, charsToIntegers);
         }
 
-        System.out.println(allAutoSigns.get("47").get("яяя").subList(150, 175));
-
         return allAutoSigns;
     }
 }
