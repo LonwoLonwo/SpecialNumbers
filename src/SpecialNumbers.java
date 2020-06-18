@@ -61,6 +61,7 @@ public class SpecialNumbers
             System.out.println(o);
         }
 
+        System.out.println("New String");
 
     }
 }
